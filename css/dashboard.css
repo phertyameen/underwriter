@@ -251,7 +251,7 @@ a {
 /* Created Inspections table */
 
 .inspectionTblDiv {
-  margin-top: 2rem;
+  margin-block: 2rem;
   margin-inline: 1rem;
   border-radius: 10px;
   overflow: hidden; /* Ensure the table's rounded corners are visible */
@@ -262,6 +262,7 @@ a {
 }
 table {
   width: 100%;
+  margin-bottom: 2rem;
   height: auto; /* Adjust height as needed */
   text-align: start;
   border: 1px solid #eeeeee;

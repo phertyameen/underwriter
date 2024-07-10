@@ -166,6 +166,7 @@ small {
   padding-block: 1.35rem;
   width: 100%;
   border: none;
+  margin-bottom: 2rem;
   border-radius: 5px;
   box-shadow: 0 2px 2px 1px var(--orange);
   transition: 500ms all ease;
