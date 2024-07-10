@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requests</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/newInspection.css">
+</head>
+
+<body>
+    <main>
+        <section class="sideNavSect">
+            <div class="sideNavDiv">
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/menu.png" alt="">
+                </div>
+                <div class="sideNavIcon calendericon">
+                    <img src="../assets/sideMenuIcons/calender.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/tool.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/preview.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/fraction.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/setting.png" alt="">
+                </div>
+            </div>
+            <div class="subSideNavDiv">
+                <div class="logoDiv">
+                    <img src="../assets/logoDesktop.png" alt="">
+                </div>
+                <h3>TRM</h3>
+                <div class="calenderDivParent">
+                    <div class="calenderDivChild overview">
+                        <img src="../assets/sideMenuIcons/chart.png" alt="">
+                        <p>Overview</p>
+                    </div>
+                    <div class="calenderDivChild">
+                        <img src="../assets/sideMenuIcons/list.png" alt="">
+                        <p>Requests</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainSect">
+            <header>
+                <nav>
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="userInitial">AM</div>
+                    <div class="userFName">
+                        <span>Adesola</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </nav>
+            </header>
+            <div>
+                <div class="introDiv">
+                    <div class="introDivText">
+                        <h2>Inspection List</h2>
+                        <p>See Inspections across all business classes</p>
+                    </div>
+                    <div class="introBtnDiv">
+                        <button id="inspectPgBtn"><i class="fa-solid fa-plus"></i>Create New Inspection</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mainSectDiv">
+                <div class="tableHeaderDiv">
+                    <div class="requestSwitches">
+                        <span id="allRequestSpan">All Requests</span>
+                        <span id="ongoingRequestSpan">Ongoing</span>
+                        <span id="completeRequestSpan">Completed</span>
+                    </div>
+                    <div class="inpGrpDiv">
+                        <div class="inpSearchDiv">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="search" id="search" placeholder="Search">
+                        </div>
+                        <div class="marineDiv">
+                            <span class="dotSpan purpleDotSpan"></span>
+                            <span class="marine">Marine</span>
+                            <i class="fa-solid fa-x" style="font-size: 10px; margin-inline: 3px;"></i>
+                        </div>
+                        <div class="sortDiv">
+                            <p>Sort by: <span style="color: black;">Class</span> <i class="fa-solid fa-angle-down"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="allRequestTblDiv">
+                    <table class="allRequestTbl">
+                        <tr>
+                            <th>ID :</th>
+                            <th>Date :</th>
+                            <th>Name :</th>
+                            <th>Inspection method :</th>
+                            <th>Officer :</th>
+                            <th>Status :</th>
+                        </tr>
+                        <tr>
+                            <td>10321</td>
+                            <td>15/06/2023</td>
+                            <td>Rovenheights properties</td>
+                            <td>Digital</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <span class="statusSpan statusOngoingTd">Ongoing</span>
+                                <span class="statusSpan statusCompleteTd completeDuplicate" id="completeDuplicate">Completed</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10321</td>
+                            <td>12/06/2023</td>
+                            <td>Shoprite Stores</td>
+                            <td>Manual</td>
+                            <td>Mustapha Onasanya</td>
+                            <td>
+                                <span class="statusSpan statusCompleteTd" id="statusCompleteTd">Completed</span>
+                                <span class="statusSpan statusOngoingTd ongoingDuplicate">Ongoing</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    // redirects back to overview section | initial dashboard
+    const overview = document.querySelector('.overview')
+
+    overview.addEventListener('click', () => {
+        window.location.href = 'dashboard.html'
+    })
+
+    // redirects to new inspection page on the click of a button
+    const inspectPgBtn = document.querySelector('#inspectPgBtn')
+    console.log(inspectPgBtn)
+
+    inspectPgBtn.addEventListener('click', e => {
+        window.location.href = './newInspection.html';
+    }
+    )
+
+    // rotating between all requests, ongoing and completed sections
+
+    const allRequests = document.querySelector('#allRequestSpan')
+    const ongoing = document.querySelector('#ongoingRequestSpan')
+    const completed = document.querySelector('#completeRequestSpan')
+    
+    const statusOngoing = document.querySelector('.ongoingDuplicate')
+    const statusOngoing1 = document.querySelector('.statusOngoingTd')
+
+    const statusComplete = document.querySelector('#completeDuplicate')
+    const statusComplete1 = document.querySelector('#statusCompleteTd')
+
+    allRequests.addEventListener('click', () =>{
+        allRequests.style.backgroundColor = '#ffffff'
+        ongoing.style.backgroundColor = '#eee'
+        completed.style.backgroundColor = '#eee'
+        
+        statusOngoing1.style.display = 'inline'
+        statusComplete.style.display = 'none'
+
+        statusComplete1.style.display = 'inline'
+        statusOngoing.style.display = 'none'
+    })
+
+    ongoing.addEventListener('click', () =>{
+        ongoing.style.backgroundColor = '#ffffff'
+        allRequests.style.backgroundColor = '#eee'
+        completed.style.backgroundColor = '#eee'
+
+        statusOngoing1.style.display = 'inline'
+        statusComplete.style.display = 'none'
+
+        statusOngoing.style.display = 'inline'
+        statusComplete1.style.display = 'none'
+    })
+
+    completed.addEventListener('click', () =>{
+        completed.style.backgroundColor = '#ffffff'
+        ongoing.style.backgroundColor = '#eee'
+        allRequests.style.backgroundColor = '#eee'
+
+        statusOngoing1.style.display = 'none'
+        statusComplete.style.display = 'inline'
+
+        statusOngoing.style.display = 'none'
+        statusComplete1.style.display = 'block'
+    })
+</script>
+
+</html>

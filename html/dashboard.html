@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <main>
+        <section class="sideNavSect">
+            <div class="sideNavDiv">
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/menu.png" alt="">
+                </div>
+                <div class="sideNavIcon calendericon">
+                    <img src="../assets/sideMenuIcons/calender.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/tool.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/preview.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/fraction.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/setting.png" alt="">
+                </div>
+            </div>
+            <div class="subSideNavDiv">
+                <div class="logoDiv">
+                    <img src="../assets/logoDesktop.png" alt="">
+                </div>
+                <h3>TRM</h3>
+                <div class="calenderDivParent">
+                    <div class="calenderDivChild overview">
+                        <img src="../assets/sideMenuIcons/chart.png" alt="" id="chartImg">
+                        <p>Overview</p>
+                    </div>
+                    <div class="calenderDivChild requests">
+                        <img src="../assets/sideMenuIcons/list.png" alt="" id="listImg">
+                        <p>Requests</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainSect">
+            <header>
+                <nav>
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="userInitial">AM</div>
+                    <div class="userFName">
+                        <span>Adesola</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </nav>
+            </header>
+            <div>
+                <div class="introDiv">
+                    <div class="introDivText">
+                        <h2>Welcome, <span>Olufemi</span></h2>
+                        <p>Take a look at your dashboard and see all pending tasks</p>
+                    </div>
+                    <div class="introBtnDiv">
+                        <button id="inspectPgBtn"><i class="fa-solid fa-plus"></i>Create New Inspection</button>
+                    </div>
+                </div>
+            </div>
+            <!-- dashboard top section -->
+            <div class="cardsDivSect">
+                <div class="cardsDivParent">
+                    <div class="cardsDiv">
+                        <div class="childDiv" id="allRequests">
+                            <div class="imgDeco">
+                                <img src="../assets/sideMenuIcons/topBlueCurve.png" alt="color decoration" class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/btmBlueCurve.png" alt="color decoration" class="secImgDeco">
+                            </div>
+                            <p>All Requests</p>
+                            <div class="pointerDiv">
+                                <img src="../assets/sideMenuIcons/pointer.png" alt="pointer image">
+                                <span class="count">32</span>
+                            </div>
+                        </div>
+                        <div class="childDiv" id="completed">
+                            <div class="imgDeco">
+                                <img src="../assets/sideMenuIcons/greenTop.png" alt="color decoration" class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/greenBtm.png" alt="color decoration" class="secImgDeco">
+                            </div>
+                            <p>Completed Requests</p>
+                            <div class="pointerDiv">
+                                <img src="../assets/sideMenuIcons/pointer.png" alt="pointer image">
+                                <span class="count">114</span>
+                            </div>
+                        </div>
+                        <div class="childDiv" id="ongoing">
+                            <div class="imgDeco">
+                                <img src="../assets/sideMenuIcons/yellowTop.png" alt="color decoration" class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/yellowBtm.png" alt="color decoration" class="secImgDeco">
+                            </div>
+                            <p>Ongoing Requests</p>
+                            <div class="pointerDiv">
+                                <img src="../assets/sideMenuIcons/pointer.png" alt="pointer image">
+                                <span class="count">19</span>
+                            </div>
+                        </div>
+                        <div class="childDiv" id="delayed">
+                            <div class="imgDeco">
+                                <img src="../assets/sideMenuIcons/redTop.png" alt="color decoration" class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/redBtm.png" alt="color decoration" class="secImgDeco">
+                            </div>
+                            <p>Delayed Requests</p>
+                            <div class="pointerDiv">
+                                <img src="../assets/sideMenuIcons/pointer.png" alt="pointer image">
+                                <span class="count">19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activityDiv">
+                        <div class="activityDivHeading">
+                            <h3>Activity</h3>
+                            <a href="#">View all <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                        <ul class="activityLists">
+                            <li class="activityList">
+                                <p>You have a property inspection coming up in three days</p>
+                                <a href="#">Set reminder</a>
+                            </li>
+                            <li class="activityList">
+                                <p>Mustapha Onasanya sent a new property inspection for Rovenheight homes</p>
+                                <a href="#">See inspection</a>
+                            </li>
+                            <li class="activityList">
+                                <p>Your scheduled inspection for Gig Logistics is three days overdue</p>
+                                <a href="#">Re-schedule now</a>
+                            </li>
+                            <li class="activityList">
+                                <p>Mustapha Onasanya sent a new property inspection for Rovenheight homes</p>
+                                <a href="#">See inspection</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- table section -->
+             <div class="inspectionTblDiv">
+                <div class="titlediv">
+                    <h4>Created Inspections</h4>
+                    <a href="#">View all <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+                <table class="inspectionTbl">
+                    <tr>
+                        <th>ID :</th>
+                        <th>Name :</th>
+                        <th>Class :</th>
+                        <th>Inspection method :</th>
+                        <th>Officer :</th>
+                        <th>Status :</th>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>GIG Logistics</td>
+                        <td><span class="dotSpan purpleDotSpan"></span>Marine</td>
+                        <td>Digital</td>
+                        <td>Mustapha Onasanya</td>
+                        <td>QUOTE REQUEST</td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Shoprite Stores</td>
+                        <td><span class="dotSpan blueDotSpan"></span>Property</td>
+                        <td>Manual</td>
+                        <td>Mustapha Onasanya</td>
+                        <td><span class="statusSpan statusCompleteTd">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Abiodun Abayomi</td>
+                        <td><span class="dotSpan orangeDotSpan"></span>Mortors</td>
+                        <td>Digital</td>
+                        <td>Mustapha Onasanya</td>
+                        <td><span class="statusSpan statusOngoingTd">Ongoing</span></td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Ben’s Agro Allied</td>
+                        <td><span class="dotSpan greenDotSpan"></span>Agric</td>
+                        <td>Manual</td>
+                        <td>Mustapha Onasanya</td>
+                        <td>SENT TO ENGINEER</td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Abiodun Abayomi</td>
+                        <td><span class="dotSpan yellowDotSpan"></span>Band</td>
+                        <td>Digital</td>
+                        <td>Mustapha Onasanya</td>
+                        <td><span class="statusSpan statusExpired"><i class="fa-regular fa-x" style="font-size: 10px; margin-inline: 5px;"></i>Link Expired</span></td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Julius Berger</td>
+                        <td><span class="dotSpan redDotSpan"></span>Engineering</td>
+                        <td>Digital</td>
+                        <td>Mustapha Onasanya</td>
+                        <td><span class="statusSpan statusSentTd"><svg class="rotate-left ash-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z"/></svg>Inspection link</span></td>
+                    </tr>
+                    <tr>
+                        <td>10321</td>
+                        <td>Abiodun Abayomi</td>
+                        <td><span class="dotSpan greenDotSpan"></span>Agric</td>
+                        <td>Digital</td>
+                        <td>Mustapha Onasanya</td>
+                        <td><span class="statusSpan statusCompleteTd">Completed</span></td>
+                    </tr>
+                 </table>
+             </div>
+        </section>
+    </main>
+</body>
+<script>
+    // changes section from overview to requests
+    const requests = document.querySelector('.requests')
+
+    requests.addEventListener('click', () => {
+
+        const orangeListImg = document.querySelector('#listImg') 
+        const chartImg = document.querySelector('#chartImg')
+
+        window.location.href = 'requests.html'
+        requests.style.color = '#ff7a00'
+    })
+    
+
+
+    // redirects to new inspection page on the click of a button
+    const inspectPgBtn = document.querySelector('#inspectPgBtn')
+    console.log(inspectPgBtn)
+
+    inspectPgBtn.addEventListener('click', e => {
+        window.location.href = './newInspection.html';
+    }
+    )
+</script>
+</html>

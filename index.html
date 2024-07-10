@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+    <header>
+        <div class="helpIconDiv">
+            <i class="fa-regular fa-circle-question helpIcon"></i>
+            <span>help</span>
+        </div>
+    </header>
+    <main>
+        <section id="loginHero">
+            <div class="loginHeroText">
+                <div class="chatIconDiv">
+                    <img src="./assets/chatIcon.png" alt="leadway logo (camel in sunset)">
+                </div>
+                <div class="loginHeroTextDiv">
+                    <h2>Customer Management</h2>
+                    <p>Manage all customers from individual customers to corporate
+                        or group customers.</p>
+                </div>
+            </div>
+        </section>
+        <section class="formSect">
+            <div id="logoImg">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <form>
+                <div>
+                    <h1>Underwriter Dashboard</h1>
+                    <h3>Welcome. Login to your portal account.</h3>
+                </div>
+                <div class="inpDiv">
+                    <label for="loginId" class="innerLabel">Login ID</label>
+                    <input type="text" name="loginId" id="loginId" placeholder="enter your login ID" class="inpDivInp">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="inpDiv">
+                    <label for="password" class="innerLabel">Password</label>
+                    <input type="password" name="password" id="loginId" placeholder="enter your password" class="inpDivInp">
+                    <small>SHOW</small>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="checkInp">
+                    <label for="rememberMe" id="rememberMeLbl">
+                        <input type="checkbox" name="rememberMe" id="rememberMe">Keep me logged in
+                    </label>
+                    <p id="passWReset">Reset Password</p>
+                </div>
+                <div class="btnDiv">
+                    <button id="btnDiv">Login</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script>
+
+    const loginbtn = document.querySelector('#btnDiv')
+    console.log(loginbtn)
+
+    loginbtn.addEventListener('click', e => {
+
+        e.preventDefault()
+        window.location.href = './html/dashboard.html'
+    })
+</script>
+
+</html>

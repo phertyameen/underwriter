@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New inspection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/root.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/newInspection.css">
+</head>
+
+<body>
+    <main>
+        <section class="sideNavSect">
+            <div class="sideNavDiv">
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/menu.png" alt="">
+                </div>
+                <div class="sideNavIcon calendericon">
+                    <img src="../assets/sideMenuIcons/calender.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/tool.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/preview.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/fraction.png" alt="">
+                </div>
+                <div class="sideNavIcon">
+                    <img src="../assets/sideMenuIcons/setting.png" alt="">
+                </div>
+            </div>
+            <div class="subSideNavDiv">
+                <div class="logoDiv">
+                    <img src="../assets/logoDesktop.png" alt="">
+                </div>
+                <h3>TRM</h3>
+                <div class="calenderDivParent">
+                    <div class="calenderDivChild">
+                        <img src="../assets/sideMenuIcons/chart.png" alt="">
+                        <p>Overview</p>
+                    </div>
+                    <div class="calenderDivChild">
+                        <img src="../assets/sideMenuIcons/list.png" alt="">
+                        <p>Requests</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainSect">
+            <header>
+                <nav>
+                    <i class="fa-regular fa-bell"></i>
+                    <div class="userInitial">AM</div>
+                    <div class="userFName">
+                        <span>Adesola</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </nav>
+            </header>
+            <div>
+                <div class="introDiv">
+                    <div class="introDivText">
+                        <h2>Create New Inspection</h2>
+                        <p>See Inspections across all business classes</p>
+                    </div>
+                    <div class="introBtnDiv">
+                        <a href="./dashboard.html"><i class="fa-regular fa-x" id="exit"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="inspectionSect">
+                <div class="inspectionDivParent">
+                    <div class="preInspection">
+                        <div class="outerDiv">
+                            <img src="../assets/sideMenuIcons/innerInspectionImg.png" alt="">
+                            <div class="innerDiv">
+                                <img src="../assets/sideMenuIcons/outerInspectionImg.png" alt="" class="inner">
+                            </div>
+                        </div>
+                        <p>Pre-loss Inspection</p>
+                    </div>
+                    <div class="postInspection">
+                        <div class="outerDiv">
+                            <img src="../assets/sideMenuIcons/innerInspectionImg.png" alt="">
+                            <div class="innerDiv">
+                                <img src="../assets/sideMenuIcons/outerInspectionImg.png" alt="" class="inner">
+                            </div>
+                        </div>
+                        <p>Post-loss Inspection</p>
+                        <div class="arrowDiv"><img src="../assets/sideMenuIcons/leftArrow.png" alt="" class="arrow">
+                        </div>
+                    </div>
+                </div>
+                <div class="selectDiv">
+                    <p>Choose a class</p>
+                    <div class="selectInpDiv">
+                        <span id="inputSpan" class="dotSpan purpleDotSpan"
+                            style="position: absolute; left: 0.3rem; top: 50%; transform: translateY(-50%);"></span>
+                        <input type="text" name="selectInp" id="selectInp" placeholder="Property" disabled>
+                        <i class="fa-solid fa-angle-down" id="dropdownToggle"></i>
+                    </div>
+                    <div name="" id="selectDropdown">
+                        <p class="dropdownItem"><span class="dotSpan orangeDotSpan"></span>Motors</p>
+                        <p class="dropdownItem"><span class="dotSpan blueDotSpan"></span>Property</p>
+                        <p class="dropdownItem"><span class="dotSpan purpleDotSpan"></span>Marine</p>
+                        <p class="dropdownItem"><span class="dotSpan greenDotSpan"></span>Agric</p>
+                        <p class="dropdownItem"><span class="dotSpan yellowDotSpan"></span>Bond</p>
+                        <p class="dropdownItem"><span class="dotSpan redDotSpan"></span>Engineering</p>
+                    </div>
+                    <button class="btnButtom"><i class="fa-regular fa-circle-right"></i>Create Request</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    // togglling dropdown items in form of select
+    const dropdownToggle = document.querySelector('#dropdownToggle');
+    const selectDropdown = document.querySelector('#selectDropdown');
+
+    const inputSpan = document.querySelector('#inputSpan');
+    const selectInp = document.querySelector('#selectInp');
+    const dropdownItems = document.querySelectorAll('.dropdownItem');
+
+    // Optionally, initialize the dropdown to be hidden
+    selectDropdown.style.display = 'none';
+
+    dropdownToggle.addEventListener('click', () => {
+        if (selectDropdown.style.display === 'none' || selectDropdown.style.display === '') {
+            selectDropdown.style.display = 'block';
+
+
+        } else {
+            selectDropdown.style.display = 'none';
+        }
+    });
+
+
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            selectInp.placeholder = item.textContent.trim();
+
+            // Get the span element inside the clicked p element
+            const clickedSpan = item.querySelector('.dotSpan');
+
+            // Replace the class of inputSpan with the class of the clicked span
+            inputSpan.className = `dotSpan ${clickedSpan.classList[1]}`;
+
+            selectDropdown.style.display = 'none';
+        });
+    });
+
+    const preInspection = document.querySelector('.preInspection');
+    const postInspection = document.querySelector('.postInspection');
+    const btnButtom = document.querySelector('.btnButtom');
+
+    preInspection.addEventListener('click', () => {
+        preInspection.style.border = '1px solid #FF7A00';
+        postInspection.style.border = '0';
+        btnButtom.style.background = '#FF7A00';
+    });
+
+    postInspection.addEventListener('click', () => {
+        postInspection.style.border = '1px solid #FF7A00';
+        preInspection.style.border = '0';
+        btnButtom.style.background = '#FF7A00';
+    });
+
+    // Changing location to respective pages if preInspection or postInspection is clicked (contains colored border) is orange
+    btnButtom.addEventListener('click', () => {
+        if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
+            window.location.href = './postLossInspection.html';
+        } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
+            window.location.href = './preLossInspection.html';
+        }
+    });
+
+
+</script>
+
+</html>
