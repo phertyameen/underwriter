@@ -11,7 +11,7 @@ main {
 }
 .sideNavDiv {
   width: 18%;
-  height: 110vh;
+  height: 100%;
   display: flex;
   background-color: var(--sideBarBg);
   flex-direction: column;
@@ -50,10 +50,12 @@ main {
 }
 .calenderDivChild:hover{
   cursor: pointer;
-  color: var(--orange);
 }
 .calenderDivChild img {
   width: 15%;
+}
+.dashboardOverview, .requestsPg{
+  color: var(--orange);
 }
 .mainSect {
   width: 85%;
@@ -111,6 +113,9 @@ nav .fa-bell {
 }
 button i {
   margin-right: 5px;
+}
+.introBtnDiv button:hover{
+  cursor: pointer;
 }
 /* postInspection page */
 .introBtnDiv a {

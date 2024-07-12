@@ -43,11 +43,11 @@
                 <h3>TRM</h3>
                 <div class="calenderDivParent">
                     <div class="calenderDivChild">
-                        <img src="../assets/sideMenuIcons/chart.png" alt="">
+                        <img src="../assets/sideMenuIcons/whiteChart.jpg" alt="">
                         <p>Overview</p>
                     </div>
-                    <div class="calenderDivChild">
-                        <img src="../assets/sideMenuIcons/list.png" alt="">
+                    <div class="calenderDivChild requestsPg">
+                        <img src="../assets/sideMenuIcons/orangeList.jpg" alt="">
                         <p>Requests</p>
                     </div>
                 </div>
@@ -166,13 +166,19 @@
     preInspection.addEventListener('click', () => {
         preInspection.style.border = '1px solid #FF7A00';
         postInspection.style.border = '0';
+
+        // change the color of the button then cursor to pointer
         btnButtom.style.background = '#FF7A00';
+        btnButtom.style.cursor = 'pointer';
     });
 
     postInspection.addEventListener('click', () => {
         postInspection.style.border = '1px solid #FF7A00';
         preInspection.style.border = '0';
+
+        // change the color of the button then cursor to pointer
         btnButtom.style.background = '#FF7A00';
+        btnButtom.style.cursor = 'pointer';
     });
 
     // Changing location to respective pages if preInspection or postInspection is clicked (contains colored border) is orange
