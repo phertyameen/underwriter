@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const submitBtn = document.querySelector('.submitTRMBtn');
     const generateBtn = document.querySelector('.generateBtn');
 
+    const hidden = document.querySelector('.hidden');
+
     const successPopUpSect = document.getElementById('successPopUpSect');
     const exitBtn = document.getElementById('exit');
 
@@ -12,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     generateBtn.addEventListener('click', () => {
         // Show the popup
         popUpSect.style.display = 'block';
+        hidden.style.display = 'block'
     });
 
     // Add event listener to the cancel button

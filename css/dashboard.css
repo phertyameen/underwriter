@@ -48,13 +48,14 @@ main {
   color: var(--sideBarColor);
   margin-bottom: 1rem;
 }
-.calenderDivChild:hover{
+.calenderDivChild:hover {
   cursor: pointer;
 }
 .calenderDivChild img {
   width: 15%;
 }
-.dashboardOverview, .requestsPg{
+.dashboardOverview,
+.requestsPg {
   color: var(--orange);
 }
 .mainSect {
@@ -77,6 +78,9 @@ nav {
 nav .fa-bell {
   font-size: 2rem;
   font-weight: 500;
+}
+#menuIcon {
+  display: none;
 }
 .userInitial {
   background-color: var(--black);
@@ -114,7 +118,7 @@ nav .fa-bell {
 button i {
   margin-right: 5px;
 }
-.introBtnDiv button:hover{
+.introBtnDiv button:hover {
   cursor: pointer;
 }
 /* postInspection page */
@@ -127,7 +131,7 @@ button i {
   margin-inline: 10px;
 }
 /* exit x-icon in newInspection page */
-#exit{
+#exit {
   font-size: 20px;
 }
 /* Dashboard top section */
@@ -378,7 +382,7 @@ table tr:last-child td:last-child {
 
 /* --------------------------------------------------------------------Responsiveness---------------------------------------------------------------- */
 /* tablets */
-@media (max-width: 979px) and (min-width: 401px) {
+@media (max-width: 979px) and (min-width: 501px) {
   .sideNavSect {
     width: 35%;
     flex-direction: column;
@@ -469,15 +473,47 @@ table tr:last-child td:last-child {
 }
 
 /* mobile screen */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   main {
     width: 100%;
     flex-direction: column;
+    position: relative;
   }
   .sideNavSect {
     width: 100%;
+    position: absolute;
+    background-color: var(--white);
     flex-direction: column;
     box-shadow: 1px 0 3px 1px var(--lightAsh);
+    opacity: 0;
+    transition: opacity 1000ms, transform 0.5s;
+    visibility: hidden;
+  }
+  .sideNavSect.show {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+  .fa-bars, .fa-xmark {
+    font-size: 2rem;
+    color: var(--iconColor);
+  }
+  .exitIcon{
+    position: relative;
+  }
+  .fa-xmark{
+    position: absolute;
+    top: -3.5rem;
+    right: 1rem;
+    /* transform: translate(-50%, -50%); */
+  }
+  #menuIcon {
+    display: flex;
   }
   .sideNavDiv {
     width: 100%;

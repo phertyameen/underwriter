@@ -183,7 +183,7 @@ button:hover {
 button:focus {
   box-shadow: 1px 1px 1px 1px var(--darkAsh) inset;
 }
-@media screen and (min-width: 401px) and (max-width: 800px) {
+@media screen and (min-width: 501px) and (max-width: 900px) {
   #loginHero {
     width: 50%;
   }
@@ -231,7 +231,7 @@ form div h3 {
 
 /* ----------------mobile responsiveness ------------------------ */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   main {
     flex-direction: column;
   }

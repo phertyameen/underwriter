@@ -114,7 +114,7 @@
                             <td>Digital</td>
                             <td>Mustapha Onasanya</td>
                             <td>
-                                <span class="statusSpan statusOngoingTd">Ongoing</span>
+                                <span class="statusSpan statusOngoingTd" id="ongoingPg">Ongoing</span>
                                 <span class="statusSpan statusCompleteTd completeDuplicate" id="completeDuplicate">Completed</span>
                             </td>
                         </tr>
@@ -141,6 +141,12 @@
 
     overview.addEventListener('click', () => {
         window.location.href = 'dashboard.html'
+    })
+    // redirects to ongoingPg section
+    const ongoingPg = document.querySelector('#ongoingPg')
+
+    ongoingPg.addEventListener('click', () => {
+        window.location.href = 'rovenProp.html'
     })
 
     // redirects to new inspection page on the click of a button

@@ -103,7 +103,7 @@
                     <div class="selectInpDiv">
                         <span id="inputSpan" class="dotSpan purpleDotSpan"
                             style="position: absolute; left: 0.3rem; top: 50%; transform: translateY(-50%);"></span>
-                        <input type="text" name="selectInp" id="selectInp" placeholder="Property" disabled>
+                        <input type="text" name="selectInp" id="selectInp" placeholder="Property" value="" disabled>
                         <i class="fa-solid fa-angle-down" id="dropdownToggle"></i>
                     </div>
                     <div name="" id="selectDropdown">
@@ -122,13 +122,14 @@
 </body>
 
 <script>
-    // togglling dropdown items in form of select
+    // toggling dropdown items in form of select
     const dropdownToggle = document.querySelector('#dropdownToggle');
     const selectDropdown = document.querySelector('#selectDropdown');
 
     const inputSpan = document.querySelector('#inputSpan');
     const selectInp = document.querySelector('#selectInp');
     const dropdownItems = document.querySelectorAll('.dropdownItem');
+    var selectedValue;
 
     // Optionally, initialize the dropdown to be hidden
     selectDropdown.style.display = 'none';
@@ -136,14 +137,10 @@
     dropdownToggle.addEventListener('click', () => {
         if (selectDropdown.style.display === 'none' || selectDropdown.style.display === '') {
             selectDropdown.style.display = 'block';
-
-
         } else {
             selectDropdown.style.display = 'none';
         }
     });
-
-
 
     dropdownItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -155,7 +152,11 @@
             // Replace the class of inputSpan with the class of the clicked span
             inputSpan.className = `dotSpan ${clickedSpan.classList[1]}`;
 
+            selectedValue = selectInp.placeholder
+            console.log(selectedValue)
+
             selectDropdown.style.display = 'none';
+
         });
     });
 
@@ -183,12 +184,51 @@
 
     // Changing location to respective pages if preInspection or postInspection is clicked (contains colored border) is orange
     btnButtom.addEventListener('click', () => {
-        if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
-            window.location.href = './postLossInspection.html';
-        } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
-            window.location.href = './preLossInspection.html';
+        if (selectedValue === 'Property') {
+            if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
+                window.location.href = './postLossInspection.html';
+                console.log('selected')
+
+
+            } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
+                window.location.href = './preLossInspection.html';
+
+
+            }
+        } else if (selectedValue === 'Motors') {
+            if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
+                window.location.href = './mortorsPostLoss.html';
+
+            } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
+                window.location.href = './mortorsPreLoss.html';
+            }
+        }
+        else {
+            alert('Please select "Property" from the dropdown to proceed.');
         }
     });
+
+
+
+    // btnButtom.addEventListener('click', () => {
+    //     if (selectedValue === 'Property') {
+    //         if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
+    //             window.location.href = './postLossInspection.html';
+    //         } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
+    //             window.location.href = './preLossInspection.html';
+    //         }
+    //     } else if (selectedValue === 'Motors') {
+    //         if (postInspection.style.border !== '' && postInspection.style.border !== '0px') {
+    //             window.location.href = './mortorsPostLoss.html';
+    //         } else if (preInspection.style.border !== '' && preInspection.style.border !== '0px') {
+    //             window.location.href = 'mortorsPreLoss.html';
+    //         }
+    //     }
+
+    //     else {
+    //         alert('Please select "Property" from the dropdown to proceed.');
+    //     }
+    // });
 
 
 </script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre Loss Inspection Property</title>
+    <title>Post Loss Inspection Property Mortors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,18 +13,11 @@
     <link rel="stylesheet" href="../css/newInspection.css">
 </head>
 <style>
-    .inpSearchDiv input {
+    .inpSearchDiv input{
         width: 400px;
         height: 100%;
     }
-
-    @media screen and (max-width: 400px) {
-        .inpSearchDiv input {
-            width: 100% !important;
-        }
-    }
 </style>
-
 <body>
     <main>
         <section class="sideNavSect">
@@ -90,45 +83,36 @@
                 </div>
             </div>
             <div class="preLossInspectionSect">
-                <h3>Pre-Loss Inspection - Property</h3>
+                <h3>Post-Loss Link Generation (optional)</h3>
                 <div class="parentInspDiv">
                     <div class="inspChildDiv">
                         <div class="parentInpDiv">
-                            <label for="">Policy Number(optional)</label>
+                            <label for="">Policy number (optional)</label>
                             <div class="inpSearchDiv">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input type="search" name="search">
                             </div>
-                        </div>
-                        <div class="parentInpDiv">
-                            <label for="">Assign To</label>
-                            <div class="inpSearchDiv">
-                                <div class="inpSearchDiv">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <input type="search" name="search" placeholder="Search a personnel">
-                                </div>
-                            </div>
-                        </div>
+                        </div>    
                     </div>
                     <div class="inspChildDiv">
                         <div class="parentInpDiv">
-                            <label for="">Insured For(optional)</label>
+                            <label for="">Claim number (optional)</label>
                             <div class="inpSearchDiv">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input type="search" name="search">
                             </div>
-                        </div>
+                        </div>    
                     </div>
                 </div>
                 <hr>
                 <div class="parentInspDiv">
                     <div class="inspChildDiv">
                         <div class="parentInpDiv">
-                            <label for="">Contact First Name</label>
+                            <label for="">Cient First Name</label>
                             <input type="text" name="" id="">
                         </div>
                         <div class="parentInpDiv">
-                            <label for="">Contact Phone number</label>
+                            <label for="">Client Phone number</label>
                             <input type="text" name="" id="" placeholder="+234">
                         </div>
                     </div>
@@ -147,22 +131,22 @@
                 <div class="parentInspDiv">
                     <div class="inspChildDiv">
                         <div class="parentInpDiv">
-                            <label for="">Risk House Number</label>
-                            <input type="text" name="" id="">
+                            <label for="">Vehicle make</label>
+                            <input type="text" name="" id="" placeholder="Select a make">
                         </div>
                         <div class="parentInpDiv">
-                            <label for="">Risk Address</label>
+                            <label for="">Registration number</label>
                             <input type="text" name="" id="">
                         </div>
                     </div>
                     <div class="inspChildDiv">
                         <div class="parentInpDiv">
-                            <label for="">State</label>
-                            <input type="text" name="" id="" placeholder="Select a Language">
+                            <label for="">Vehicle model</label>
+                            <input type="text" name="" id="">
                         </div>
                         <div class="parentInpDiv">
-                            <label for="">LGA</label>
-                            <input type="text" name="" id="" placeholder="Select a Language">
+                            <label for="">Year</label>
+                            <input type="text" name="" id="" placeholder="Select a year">
                         </div>
                     </div>
                 </div>
@@ -175,9 +159,9 @@
                 <div class="inspChildDiv childDivText">
                     <div>
                         <label for="attachDoc" id="attachDocLbl">Attach Document</label>
-                        <input type="file" name="attachDoc" id="attachDoc">
+                        <input type="file" name="" id="attachDoc">
                     </div>
-                    <button class="orangeBtn generateBtn">Generate</button>
+                    <button  class="generateBtn">Generate</button>
                 </div>
             </div>
             <div class="popUpSect" id="popUpSect">
@@ -195,17 +179,20 @@
                 <div class="successImg">
                     <img src="../assets/successInspectionPopup.png" alt="Success popup">
                 </div>
-                <p class="successAlertMsg">You’ve successfully created new <br>Inspection ID-23321 for PRIME GARDENS
-                </p>
+                <p class="successAlertMsg">You’ve successfully created new <br>Inspection ID-23321 for PRIME GARDENS </p>
                 <div class="TRMBtnDiv successTRMBtnDiv">
                     <button class="cancelTRMBtn" id="goToRequestBtn">Go to request list</button>
-                    <button class="submitTRMBtn">Create new inspection</button>
+                    <button class="submitTRMBtn" id="goToCreateInspection">Create new inspection</button>
                 </div>
             </div>
         </section>
-        <div class="overlay hidden"></div>
     </main>
 </body>
-<script src="../js.js"></script>
-
+<script src="../js.js">
+    // Add an event listener to the label to trigger the file input click
+    
+    // document.querySelector('label[for="attachDoc"]').addEventListener('click', function() {
+    //         document.getElementById('attachDoc').click();
+    //     });
+</script>
 </html>

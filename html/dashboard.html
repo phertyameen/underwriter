@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
-
 <body>
     <main>
         <section class="sideNavSect">
@@ -37,6 +36,9 @@
                 <div class="logoDiv">
                     <img src="../assets/logoDesktop.png" alt="">
                 </div>
+                <div class="exitIcon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <h3>TRM</h3>
                 <div class="calenderDivParent">
                     <div class="calenderDivChild overview dashboardOverview">
@@ -60,6 +62,9 @@
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
                 </nav>
+                <div id="menuIcon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </header>
             <div>
                 <div class="introDiv">
@@ -245,7 +250,25 @@
 
     inspectPgBtn.addEventListener('click', e => {
         window.location.href = './newInspection.html';
-    }
-    )
+    })
+
+    // getting a menu icon to dispay a dropdown in a mobile view
+
+    let menuIcon = document.querySelector('#menuIcon')
+    let exitIcon = document.querySelector('.exitIcon')
+
+    menuIcon.addEventListener('click', () => {
+        console.log(menuIcon)
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.toggle('show');
+    })
+    exitIcon.addEventListener('click', () => {
+        console.log(exitIcon)
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.remove('show');
+    })
+
 </script>
 </html>

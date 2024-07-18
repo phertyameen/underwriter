@@ -108,7 +108,14 @@
                     <div>
                         <p class="orangeTxt">Policy Progress</p>
                         <div class="progress-container">
-                            <svg class="progress-circle" width="150" height="150">
+                            <svg class="progress-circle" width="100" height="100" viewBox="0 0 150 150">
+                                <!-- Define the gradient -->
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="70%" style="stop-color:#FF7A00; stop-opacity:1" />
+                                        <stop offset="85%" style="stop-color:#FFE5D3; stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
                                 <circle class="bg" cx="75" cy="75" r="70"></circle>
                                 <circle class="progress" cx="75" cy="75" r="70"></circle>
                             </svg>
@@ -162,24 +169,52 @@
                             </div>
                         </div>
                         <div class="propDescSect">
-                            <p>Rovenheight homes registered as a LLC building on the 15th of May 2016 is a Grey and White twelve
-                                storey building located at No 12 OGUNSANYA DRIVE, ALCOVE ESTATE, LEKKI PHASE 1, LAGOS STATE. The
+                            <p>Rovenheight homes registered as a LLC building on the 15th of May 2016 is a Grey and
+                                White twelve
+                                storey building located at No 12 OGUNSANYA DRIVE, ALCOVE ESTATE, LEKKI PHASE 1, LAGOS
+                                STATE. The
                                 property is owned by Mr. Badmus Akinrele who stands as the insurer of the property.</p>
                         </div>
                         <div class="supportDocSect">
                             <div>
-                                <p>Policy document</p>
-                                <p>Police report</p>
-                                <p>Attached document 1</p>
+                                <p class="pBlock downloadSpan">Policy document</p>
+                                <p class="pBlock downloadSpan">Police report</p>
+                                <p class="pBlock downloadSpan">Attached document 1</p>
                             </div>
-                            <div class="orangeList">
+                            <div class="date">
                                 <div>
-                                    <p>Police report</p>
-                                    <p>Attached document 1</p>
-                                    <p>25 Aug, 2022 9:00 AM</p>
+                                    <p class="pBlock">25 Aug, 2022 9:00 AM</p>
+                                    <p class="pBlock">25 Aug, 2022 9:00 AM</p>
+                                    <p class="pBlock">25 Aug, 2022 9:00 AM</p>
                                 </div>
-                                <div></div>
-                            </div>    
+                                <div class="orangeList">
+                                    <div>
+                                        <div class="pBlock">
+                                            <i class="fa-regular fa-eye"></i>
+                                            <span>View</span>
+                                        </div>
+                                        <div class="pBlock">
+                                            <i class="fa-regular fa-eye"></i>
+                                            <span>View</span>
+                                        </div>
+                                        <div class="pBlock">
+                                            <i class="fa-regular fa-eye"></i>
+                                            <span>View</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="downloadDiv">
+                                            <span class="pBlock downloadSpan">Download</span>
+                                        </div>
+                                        <div>
+                                            <span class="pBlock downloadSpan">Download</span>
+                                        </div>
+                                        <div>
+                                            <span class="pBlock downloadSpan">Download</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,50 +236,70 @@
 
 
     propInfoSpan.addEventListener('click', () => {
-        propInfoSpan.style.borderBottom = '#ff7a00'
+        propInfoSpan.style.borderBottom = '5px solid #ff7a00'
         propInfoSpan.style.color = '#ff7a00'
-        propInfoSpan.style.color = '#9FA8AF'
-        
-        // propDescSpan.style.borderBottom = 'none'
-        // supportDocSpan.style.borderBottom = 'none'
 
-        // propDescSect.style.display = 'none'
-        // supportDocSect.style.display = 'none'
+        propDescSpan.style.color = '#9FA8AF'
+        propDescSpan.style.borderBottom = 'none'
+
+        supportDocSpan.style.color = '#9FA8AF'
+        supportDocSpan.style.borderBottom = 'none'
+
+        // switching sections
+        propInfoSec.style.display = 'flex'
+        propDescSect.style.display = 'none'
+        supportDocSect.style.display = 'none'
     })
 
     propDescSpan.addEventListener('click', () => {
-        propDescSpan.style.borderBottom = '#ff7a00'
+        propDescSpan.style.borderBottom = '5px solid #ff7a00'
         propDescSpan.style.color = '#ff7a00'
-        propInfoSpan.style.borderBottom = 'none'
-        supportDocSpan.style.color = '#ff7a00'
 
+        propInfoSpan.style.color = '#9FA8AF'
+        propInfoSpan.style.borderBottom = 'none'
+
+        supportDocSpan.style.color = '#9FA8AF'
+        supportDocSpan.style.borderBottom = 'none'
+
+        // switching sections
         propInfoSec.style.display = 'none'
         propDescSect.style.display = 'block'
         supportDocSect.style.display = 'none'
-
-        statusOngoing.style.display = 'inline'
-        statusComplete1.style.display = 'none'
     })
 
-    completed.addEventListener('click', () => {
+    supportDocSpan.addEventListener('click', () => {
+        supportDocSpan.style.borderBottom = '5px solid #ff7a00'
+        supportDocSpan.style.color = '#ff7a00'
+
+        propDescSpan.style.color = '#9FA8AF'
+        propDescSpan.style.borderBottom = 'none'
+
+        propInfoSpan.style.color = '#9FA8AF'
+        propInfoSpan.style.borderBottom = 'none'
+
+        // switching sections
+        propInfoSec.style.display = 'none'
+        propDescSect.style.display = 'none'
+        supportDocSect.style.display = 'flex'
+
     })
 
     // adding functionality to progress bar
 
     function setProgress(percent) {
-            const circle = document.querySelector('.progress');
-            const radius = circle.r.baseVal.value;
-            const circumference = 2 * Math.PI * radius;
-            const offset = circumference - (percent / 100) * circumference;
+        const circle = document.querySelector('.progress');
+        const radius = circle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (percent / 100) * circumference;
 
-            circle.style.strokeDashoffset = offset;
+        circle.style.strokeDashoffset = offset;
 
-            const progressValue = document.getElementById('progress-value');
-            progressValue.textContent = `${percent}%`;
-        }
+        const progressValue = document.getElementById('progress-value');
+        progressValue.textContent = `${percent}%`;
+    }
 
-        // Set progress to 67%
-        setProgress(67);
+    // Set progress to 70%
+    setProgress(70);
 </script>
 
 </html>
