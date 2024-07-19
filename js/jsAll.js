@@ -73,6 +73,9 @@ allRequests.addEventListener('click', () =>{
 
     statusComplete1.style.display = 'inline'
     statusOngoing.style.display = 'none'
+
+    // show inspectPgBtn
+    inspectPgBtn.style.display = 'flex'
 })
 
 ongoing.addEventListener('click', () =>{

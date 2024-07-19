@@ -519,6 +519,7 @@ table tr:last-child td:last-child {
     position: static;
     font-size: 2rem;
     display: inline;
+    color: var(--iconColor);
   }
   #menuIcon {
     display: flex;

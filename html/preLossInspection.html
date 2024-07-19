@@ -205,7 +205,7 @@
                 </p>
                 <div class="TRMBtnDiv successTRMBtnDiv">
                     <button class="cancelTRMBtn" id="goToRequestBtn">Go to request list</button>
-                    <button class="submitTRMBtn">Create new inspection</button>
+                    <button class="submitTRMBtn" id="goToCreateInspection">Create new inspection</button>
                 </div>
             </div>
         </section>
@@ -280,6 +280,7 @@
         
         // Hide the success popup
         successPopUpSect.style.display = 'none';
+        hidden.style.display = 'none'
     });
 
 
@@ -292,7 +293,7 @@
     });
 
     document.querySelector('#goToCreateInspection').addEventListener('click', () => {
-        //navigate to the new inspection pade
+        //navigate to the new inspection page
         window.location.href = './newInspection.html';
     });
 
