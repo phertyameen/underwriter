@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/newInspection.css">
+    <style>
+        @media screen and (min-width: 979px){
+            .sideNavSect{
+                height: 100vh;
+            }
+        }
+        @media (max-width: 979px) and (min-width: 501px){
+            .sideNavSect{
+                height: 100vh;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,6 +52,9 @@
                 <div class="logoDiv">
                     <img src="../assets/logoDesktop.png" alt="">
                 </div>
+                <div class="exitIcon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <h3>TRM</h3>
                 <div class="calenderDivParent">
                     <div class="calenderDivChild overview">
@@ -63,6 +78,9 @@
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
                 </nav>
+                <div id="menuIcon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </header>
             <div>
                 <div class="introDiv">
@@ -87,18 +105,20 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="search" name="search" id="search" placeholder="Search">
                         </div>
-                        <div class="marineDiv">
-                            <span class="dotSpan purpleDotSpan"></span>
-                            <span class="marine">Marine</span>
-                            <i class="fa-solid fa-x" style="font-size: 10px; margin-inline: 3px;"></i>
-                        </div>
-                        <div class="sortDiv">
-                            <p>Sort by: <span style="color: black;">Class</span> <i class="fa-solid fa-angle-down"></i></p>
+                        <div class="marineSortGrp">
+                            <div class="marineDiv">
+                                <span class="dotSpan purpleDotSpan"></span>
+                                <span class="marine">Marine</span>
+                                <i class="fa-solid fa-x" style="font-size: 10px; margin-inline: 3px;"></i>
+                            </div>
+                            <div class="sortDiv">
+                                <p>Sort by: <span style="color: black;">Class</span> <i class="fa-solid fa-angle-down"></i></p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="allRequestTblDiv">
-                    <table class="allRequestTbl">
+                    <table class="allRequestTbl" id="table">
                         <tr>
                             <th>ID :</th>
                             <th>Date :</th>
@@ -135,76 +155,6 @@
         </section>
     </main>
 </body>
-<script>
-    // redirects back to overview section | initial dashboard
-    const overview = document.querySelector('.overview')
-
-    overview.addEventListener('click', () => {
-        window.location.href = 'dashboard.html'
-    })
-    // redirects to ongoingPg section
-    const ongoingPg = document.querySelector('#ongoingPg')
-
-    ongoingPg.addEventListener('click', () => {
-        window.location.href = 'rovenProp.html'
-    })
-
-    // redirects to new inspection page on the click of a button
-    const inspectPgBtn = document.querySelector('#inspectPgBtn')
-    console.log(inspectPgBtn)
-
-    inspectPgBtn.addEventListener('click', e => {
-        window.location.href = './newInspection.html';
-    }
-    )
-
-    // rotating between all requests, ongoing and completed sections
-
-    const allRequests = document.querySelector('#allRequestSpan')
-    const ongoing = document.querySelector('#ongoingRequestSpan')
-    const completed = document.querySelector('#completeRequestSpan')
-    
-    const statusOngoing = document.querySelector('.ongoingDuplicate')
-    const statusOngoing1 = document.querySelector('.statusOngoingTd')
-
-    const statusComplete = document.querySelector('#completeDuplicate')
-    const statusComplete1 = document.querySelector('#statusCompleteTd')
-
-    allRequests.addEventListener('click', () =>{
-        allRequests.style.backgroundColor = '#ffffff'
-        ongoing.style.backgroundColor = '#eee'
-        completed.style.backgroundColor = '#eee'
-        
-        statusOngoing1.style.display = 'inline'
-        statusComplete.style.display = 'none'
-
-        statusComplete1.style.display = 'inline'
-        statusOngoing.style.display = 'none'
-    })
-
-    ongoing.addEventListener('click', () =>{
-        ongoing.style.backgroundColor = '#ffffff'
-        allRequests.style.backgroundColor = '#eee'
-        completed.style.backgroundColor = '#eee'
-
-        statusOngoing1.style.display = 'inline'
-        statusComplete.style.display = 'none'
-
-        statusOngoing.style.display = 'inline'
-        statusComplete1.style.display = 'none'
-    })
-
-    completed.addEventListener('click', () =>{
-        completed.style.backgroundColor = '#ffffff'
-        ongoing.style.backgroundColor = '#eee'
-        allRequests.style.backgroundColor = '#eee'
-
-        statusOngoing1.style.display = 'none'
-        statusComplete.style.display = 'inline'
-
-        statusOngoing.style.display = 'none'
-        statusComplete1.style.display = 'block'
-    })
-</script>
+<script src="../js/jsAll.js"></script>
 
 </html>

@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/dashboard.css">
+    <!-- <link rel="stylesheet" href="../css/newInspection.css"> -->
 </head>
+
 <body>
     <main>
         <section class="sideNavSect">
@@ -36,9 +40,6 @@
                 <div class="logoDiv">
                     <img src="../assets/logoDesktop.png" alt="">
                 </div>
-                <div class="exitIcon">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
                 <h3>TRM</h3>
                 <div class="calenderDivParent">
                     <div class="calenderDivChild overview dashboardOverview">
@@ -50,6 +51,9 @@
                         <p>Requests</p>
                     </div>
                 </div>
+            </div>
+            <div class="exitIcon">
+                <i class="fa-solid fa-xmark"></i>
             </div>
         </section>
         <section class="mainSect">
@@ -83,8 +87,10 @@
                     <div class="cardsDiv">
                         <div class="childDiv" id="allRequests">
                             <div class="imgDeco">
-                                <img src="../assets/sideMenuIcons/topBlueCurve.png" alt="color decoration" class="firstImgDeco">
-                                <img src="../assets/sideMenuIcons/btmBlueCurve.png" alt="color decoration" class="secImgDeco">
+                                <img src="../assets/sideMenuIcons/topBlueCurve.png" alt="color decoration"
+                                    class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/btmBlueCurve.png" alt="color decoration"
+                                    class="secImgDeco">
                             </div>
                             <p>All Requests</p>
                             <div class="pointerDiv">
@@ -94,8 +100,10 @@
                         </div>
                         <div class="childDiv" id="completed">
                             <div class="imgDeco">
-                                <img src="../assets/sideMenuIcons/greenTop.png" alt="color decoration" class="firstImgDeco">
-                                <img src="../assets/sideMenuIcons/greenBtm.png" alt="color decoration" class="secImgDeco">
+                                <img src="../assets/sideMenuIcons/greenTop.png" alt="color decoration"
+                                    class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/greenBtm.png" alt="color decoration"
+                                    class="secImgDeco">
                             </div>
                             <p>Completed Requests</p>
                             <div class="pointerDiv">
@@ -105,8 +113,10 @@
                         </div>
                         <div class="childDiv" id="ongoing">
                             <div class="imgDeco">
-                                <img src="../assets/sideMenuIcons/yellowTop.png" alt="color decoration" class="firstImgDeco">
-                                <img src="../assets/sideMenuIcons/yellowBtm.png" alt="color decoration" class="secImgDeco">
+                                <img src="../assets/sideMenuIcons/yellowTop.png" alt="color decoration"
+                                    class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/yellowBtm.png" alt="color decoration"
+                                    class="secImgDeco">
                             </div>
                             <p>Ongoing Requests</p>
                             <div class="pointerDiv">
@@ -116,7 +126,8 @@
                         </div>
                         <div class="childDiv" id="delayed">
                             <div class="imgDeco">
-                                <img src="../assets/sideMenuIcons/redTop.png" alt="color decoration" class="firstImgDeco">
+                                <img src="../assets/sideMenuIcons/redTop.png" alt="color decoration"
+                                    class="firstImgDeco">
                                 <img src="../assets/sideMenuIcons/redBtm.png" alt="color decoration" class="secImgDeco">
                             </div>
                             <p>Delayed Requests</p>
@@ -151,10 +162,10 @@
                         </ul>
                     </div>
                 </div>
-            </div> 
-            
+            </div>
+
             <!-- table section -->
-             <div class="inspectionTblDiv">
+            <div class="inspectionTblDiv">
                 <div class="titlediv">
                     <h4>Created Inspections</h4>
                     <a href="#">View all <i class="fa-solid fa-angle-right"></i></a>
@@ -206,7 +217,8 @@
                         <td><span class="dotSpan yellowDotSpan"></span>Band</td>
                         <td>Digital</td>
                         <td>Mustapha Onasanya</td>
-                        <td><span class="statusSpan statusExpired"><i class="fa-regular fa-x" style="font-size: 10px; margin-inline: 5px;"></i>Link Expired</span></td>
+                        <td><span class="statusSpan statusExpired"><i class="fa-regular fa-x"
+                                    style="font-size: 10px; margin-inline: 5px;"></i>Link Expired</span></td>
                     </tr>
                     <tr>
                         <td>10321</td>
@@ -214,7 +226,12 @@
                         <td><span class="dotSpan redDotSpan"></span>Engineering</td>
                         <td>Digital</td>
                         <td>Mustapha Onasanya</td>
-                        <td><span class="statusSpan statusSentTd"><svg class="rotate-left ash-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z"/></svg>Inspection link</span></td>
+                        <td><span class="statusSpan statusSentTd"><svg class="rotate-left ash-color"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96-43 96-96l0-306.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 416c0 17.7-14.3 32-32 32l-96 0z" />
+                                </svg>Inspection link</span></td>
                     </tr>
                     <tr>
                         <td>10321</td>
@@ -224,44 +241,21 @@
                         <td>Mustapha Onasanya</td>
                         <td><span class="statusSpan statusCompleteTd">Completed</span></td>
                     </tr>
-                 </table>
-             </div>
+                </table>
+            </div>
         </section>
     </main>
 </body>
-<script>
-    // changes section from overview to requests
-    const requests = document.querySelector('.requests')
-
-    requests.addEventListener('click', () => {
-
-        const orangeListImg = document.querySelector('#listImg') 
-        const chartImg = document.querySelector('#chartImg')
-
-        window.location.href = 'requests.html'
-        requests.style.color = '#ff7a00'
-    })
-    
-
-
-    // redirects to new inspection page on the click of a button
-    const inspectPgBtn = document.querySelector('#inspectPgBtn')
-    console.log(inspectPgBtn)
-
-    inspectPgBtn.addEventListener('click', e => {
-        window.location.href = './newInspection.html';
-    })
-
-    // getting a menu icon to dispay a dropdown in a mobile view
-
+<script src="../js/jsAll.js">
     let menuIcon = document.querySelector('#menuIcon')
     let exitIcon = document.querySelector('.exitIcon')
+    console.log(menuIcon, exitIcon)
 
     menuIcon.addEventListener('click', () => {
-        console.log(menuIcon)
         const sideNavSect = document.querySelector('.sideNavSect')
         // sideNavSect.style.display = 'flex'
         sideNavSect.classList.toggle('show');
+        // exitIcon.style.display = 'block' 
     })
     exitIcon.addEventListener('click', () => {
         console.log(exitIcon)
@@ -271,4 +265,5 @@
     })
 
 </script>
+
 </html>

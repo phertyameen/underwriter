@@ -5,13 +5,14 @@ main {
 }
 .sideNavSect {
   width: 20%;
+  /* height: auto; */
   display: flex;
   /* box-shadow: 1px 1px 3px 1px var(--lightAsh); */
   box-shadow: 0 1px 3px 1px var(--lightAsh);
 }
 .sideNavDiv {
   width: 18%;
-  height: 100%;
+  height: auto;
   display: flex;
   background-color: var(--sideBarBg);
   flex-direction: column;
@@ -37,6 +38,9 @@ main {
 }
 .logoDiv {
   margin-block: 2rem;
+}
+.fa-xmark{
+  display: none;
 }
 .subSideNavDiv h3 {
   margin-bottom: 2rem;
@@ -263,9 +267,8 @@ a {
   margin-block: 2rem;
   margin-inline: 1rem;
   border-radius: 10px;
-  overflow: hidden; /* Ensure the table's rounded corners are visible */
+  overflow: auto; /* Ensure the table's rounded corners are visible */
   height: 12rem; /* Set a fixed height for the container */
-  overflow-y: auto; /* Enable vertical scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
@@ -482,6 +485,7 @@ table tr:last-child td:last-child {
   .sideNavSect {
     width: 100%;
     position: absolute;
+    z-index: 1;
     background-color: var(--white);
     flex-direction: column;
     box-shadow: 1px 0 3px 1px var(--lightAsh);
@@ -491,7 +495,7 @@ table tr:last-child td:last-child {
   }
   .sideNavSect.show {
     opacity: 1;
-    transform: translateX(0);
+    /* transform: translateX(0); */
     visibility: visible;
 }
   header {
@@ -504,13 +508,17 @@ table tr:last-child td:last-child {
     color: var(--iconColor);
   }
   .exitIcon{
-    position: relative;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    height: 20px;
+    width: 20px;
   }
   .fa-xmark{
-    position: absolute;
-    top: -3.5rem;
-    right: 1rem;
-    /* transform: translate(-50%, -50%); */
+    color: var(--black);
+    position: static;
+    font-size: 2rem;
+    display: inline;
   }
   #menuIcon {
     display: flex;
@@ -598,26 +606,19 @@ table tr:last-child td:last-child {
   }
 
   /* Created Inspections table */
-
-  .inspectionTblDiv {
+  table{
     width: 100%;
-    margin-top: 2rem;
-    margin-inline: 1rem;
-    border-radius: 10px;
-    overflow: hidden; /* Ensure the table's rounded corners are visible */
-    height: 12rem; /* Set a fixed height for the container */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow: auto;
+    table-layout: auto;
   }
-  table {
+  tbody {
     width: 100%;
-    min-width: 600px;
+    min-width: 700px;
+    overflow: scroll;
   }
   th,
   td {
-    width: max-content;
+    white-space: nowrap;
     padding-inline: 1rem;
   }
 }

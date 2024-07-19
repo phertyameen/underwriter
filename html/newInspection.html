@@ -40,9 +40,12 @@
                 <div class="logoDiv">
                     <img src="../assets/logoDesktop.png" alt="">
                 </div>
+                <div class="exitIcon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 <h3>TRM</h3>
                 <div class="calenderDivParent">
-                    <div class="calenderDivChild">
+                    <div class="calenderDivChild overview">
                         <img src="../assets/sideMenuIcons/whiteChart.jpg" alt="">
                         <p>Overview</p>
                     </div>
@@ -63,6 +66,9 @@
                         <i class="fa-solid fa-angle-down"></i>
                     </div>
                 </nav>
+                <div id="menuIcon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </header>
             <div>
                 <div class="introDiv">
@@ -120,8 +126,34 @@
         </section>
     </main>
 </body>
-
+<!-- <script src="../js/jsAll.js"></script> -->
+<!-- <script src="../js/js.js"></script> -->
 <script>
+    let menuIcon = document.querySelector('#menuIcon')
+    let exitIcon = document.querySelector('.exitIcon')
+    console.log(menuIcon, exitIcon)
+
+    menuIcon.addEventListener('click', () => {
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.toggle('show');
+        // exitIcon.style.display = 'block' 
+    })
+    exitIcon.addEventListener('click', () => {
+        console.log(exitIcon)
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.remove('show');
+    })
+
+    // redirects back to overview section | initial dashboard
+const overview = document.querySelector('.overview')
+console.log(overview)
+
+overview.addEventListener('click', () => {
+    window.location.href = 'dashboard.html'
+})
+
     // toggling dropdown items in form of select
     const dropdownToggle = document.querySelector('#dropdownToggle');
     const selectDropdown = document.querySelector('#selectDropdown');

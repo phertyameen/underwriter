@@ -1,4 +1,4 @@
-/* --------------------request.html page */
+/* --------------------request.html page----------------------------- */
 .mainSectDiv {
   margin: 2rem;
 }
@@ -8,6 +8,10 @@
   align-items: center;
   margin-block: 0.75rem;
 }
+.marineSortGrp{
+  display: flex;
+  gap: 2rem;
+}
 .requestSwitches {
   padding: 0.45rem;
   background-color: #eee;
@@ -16,6 +20,9 @@
 .requestSwitches span {
   padding: 0.2rem 8px;
   border-radius: 5px;
+}
+.requestSwitches span:hover{
+  cursor: pointer;
 }
 #allRequestSpan {
   background-color: var(--white);
@@ -107,8 +114,14 @@
   padding: 0.5rem 1rem;
   display: none;
 }
+#selectDropdown p:hover{
+  cursor: pointer;
+}
 .selectDiv p {
   margin: 1rem;
+}
+.selectDiv p:hover{
+  cursor: pointer;
 }
 option {
   padding: 2rem !important;
@@ -137,9 +150,50 @@ option {
   padding: 13px 37px;
 }
 
-/* ---------------mobile response------------*/
+/* ---------------mobile response requests | pre | post inspection pages ------------*/
 
 @media screen and (max-width: 500px) {
+  /* mobile response requests */
+  .mainSectDiv {
+    margin: 0.2rem;
+  }
+  .tableHeaderDiv {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+  .marineSortGrp{
+    gap: 4rem;
+  }
+  .requestSwitches {
+    padding: 0.45rem;
+    background-color: #eee;
+    border-radius: 6px;
+  }
+  .requestSwitches span {
+    padding: 0.2rem 8px;
+    border-radius: 5px;
+  }
+  .inpGrpDiv {
+    flex-direction: column-reverse;
+  }
+  .inpSearchDiv input {
+    width: 100%;    
+    margin-bottom: 1rem;
+  }
+  .inpSearchDiv i {
+    top: 38%;
+  }
+  .allRequestTblDiv{
+    width: 100%;
+    overflow: auto;
+  }
+  #table {
+    width: 100%;
+    min-width: 700px;
+    overflow: scroll;
+  }
+
+  /*----------- mobile response pre | post inspection pages------------ */
   .inspectionSect {
     width: 100%;
     margin-block: 1rem;
@@ -316,15 +370,15 @@ body {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(2px);
-  z-index: 1;
+  z-index: 1;
 }
 
 /* Rovenheight Properties */
 .mainSectDiv {
   display: flex;
   flex-direction: column;
-  color: #585858;
   justify-content: space-between;
+  color: #585858;
 }
 .rovMainSectDiv{
   display: flex;
@@ -361,13 +415,9 @@ body {
   color: var(--orange);
 }
 .profileDescImgDiv {
-  width: 100%;
+  /* width: 100%; */
+  /* border-radius: 8px; */
   margin-bottom: 0.4rem;
-  border-radius: 8px;
-}
-.profileDescImgDiv img {
-  width: 100%;
-  border-radius: 8px;
 }
 .profileDescPDiv .profileDesc {
   margin-block: 0.7rem;
@@ -385,8 +435,8 @@ body {
   border-left: 1px solid #d0d5dd;
   height: max-content;
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  gap: 2rem;
   position: relative;
 }
 .offset {
@@ -428,7 +478,6 @@ body {
   border-left: 10px solid #737373;
 }
 .card1 {
-  margin-right: -2rem;
   margin-left: 2rem;
   border-left: 10px solid var(--orange);
 }
@@ -458,8 +507,7 @@ body {
   gap: 1.2rem;
 }
 
-/* Survey Repors
-ts */
+/* Survey Reports */
 
 .statusOngoingSect {
   padding: 2rem;
@@ -679,19 +727,29 @@ ts */
   }
 
   /* Rovenheight Properties */
+  .mainSectDiv{
+    width: 97%;
+    margin: 0 3%;
+
+  }
   .rovMainSectDiv {
     flex-direction: column;
     gap: 1rem;
   }
-  .cardDiv{
-    margin-left: 0.4rem;
+  .card1{
+    margin-left: 0;
+  }
+  .card1{
+    margin-left: 0;
+
   }
   .profileDesc {
     display: flex;
     justify-content: space-between;
   }
   .cardsParentDiv {
-    padding: 1rem 0;
+    width: 100%;
+    padding: 1rem;
   }
   .profileDescPDivMain {
     width: 100%;
@@ -701,12 +759,12 @@ ts */
     text-align: center;
   }
   .profileDescImgDiv img {
-    width: 100%;
+    width: 80%;
     border-radius: 8px;
   }
-  .cardsParentDiv {
-    width: 100%;
-  }
+  /* .cardsParentDiv {
+    
+  } */
   .offset {
     top: -1.2rem;
     left: -1.1rem;
@@ -714,14 +772,11 @@ ts */
   #spanBottom {
     top: 43%;
   }
-  .cardDiv {
+  /* .cardDiv {
     padding: 0.5rem;
     width: 100;
-  }
-  .card1 {
-    margin-right: -1rem;
-    margin-left: 1rem;
-  }
+  } */
+ 
   .cardBtnDiv button {
     padding: 0.2rem 0.5rem;
     width: max-content;
@@ -732,18 +787,17 @@ ts */
     gap: 0.75rem;
   }
 
-  /* Survey Repors
-ts */
-
+  /* Survey Reports */
 .statusOngoingSect {
   padding: 0.5rem;
 }
 .rovProp {
   height: max-content !important;
-  justify-content: start !important;
-  padding: 2rem;
-  gap: 1rem;
-  flex-direction: column;
+  /* justify-content: start !important; */
+  /* padding: 2rem; */
+  /* gap: 1rem; */
+  /* flex-direction: column; */
+  display: block;
 }
 .rovPropImgDiv {
   height: max-content;
