@@ -605,6 +605,9 @@ table tr:last-child td:last-child {
     height: max-content;
     margin: 0;
   }
+  .secImgDeco{
+    bottom: -7.129rem;
+  }
 
   /* Created Inspections table */
   table{
