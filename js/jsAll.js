@@ -102,7 +102,7 @@ completed.addEventListener('click', () =>{
     statusComplete.style.display = 'inline'
 
     statusOngoing.style.display = 'none'
-    statusComplete1.style.display = 'block'
+    statusComplete1.style.display = 'inline'
 
     // hide inspectPgBtn
     inspectPgBtn.style.display = 'none'
