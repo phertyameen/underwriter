@@ -485,6 +485,7 @@ table tr:last-child td:last-child {
   }
   .sideNavSect {
     width: 100%;
+    height: max-content;
     position: absolute;
     z-index: 1;
     background-color: var(--white);
@@ -592,6 +593,7 @@ table tr:last-child td:last-child {
     gap: 1rem;
   }
   .cardsDiv {
+    width: 100%;
     grid-template-columns: 1fr; /* one columns */
   }
 

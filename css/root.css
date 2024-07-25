@@ -19,6 +19,9 @@
   --sideBarBg: #2F2F2F;
   --sideBarColor: #9FA8AF;
 }
+input{
+  outline: none;
+}
 @media screen and (min-width: 1440px) {
   body{
     height: 100vh;
