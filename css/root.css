@@ -19,3 +19,49 @@
   --sideBarBg: #2F2F2F;
   --sideBarColor: #9FA8AF;
 }
+@media screen and (min-width: 1440px) {
+  body{
+    height: 100vh;
+  }
+  .sideNavSect{
+    height: 100vh;
+  }
+  .childDiv{
+    height: 163px !important;
+  }
+  .secImgDeco {
+    position: absolute;
+    left: -1rem;
+    bottom: -8.89rem !important;
+    border-bottom-left-radius: 10px;
+}
+.pointerDiv {
+margin-top: 2.75rem !important;
+}
+.activityDiv {
+  width: 50%;
+  height: max-content !important;
+}
+.activityList{
+  margin-bottom: 2rem !important;
+}
+.inspectionTblDiv{
+  height: max-content !important;
+}
+
+/* New Inspection */
+.inspectionSect{
+  margin-block: 8rem !important;
+}
+
+/* LossInspectionSect forms */
+.preLossInspectionSect{
+  height: max-content !important;
+}
+.parentInpDiv {
+  width: 800px !important;
+}
+.inspChildDivText #parentInpDivText {
+  width: 100% !important;
+}
+}

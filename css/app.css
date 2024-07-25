@@ -1,11 +1,30 @@
-body {
-  margin: auto;
-}
+/* body{
+  height: 1024px;
+  max-width: 1440px;
+  max-height: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 /* ----------------------------index | Login form page ----------------------------------*/
-/* hero section */
+body {
+  margin: auto;
+  height: 100vh;
+}
 header {
   position: relative;
+}
+/* hero section */
+main {
+  display: flex;
+  height: 100%;
+  /* width: 100%; */
+  flex-direction: row-reverse;
+  max-width: 1440px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 .helpIconDiv {
   position: absolute;
@@ -18,13 +37,6 @@ header {
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
-}
-main {
-  display: flex;
-  height: 120vh;
-  flex-direction: row-reverse;
-  max-width: 1440px;
-  margin: auto;
 }
 h1 {
   font-size: 2.6rem;
@@ -69,9 +81,9 @@ h1 {
 }
 /* form section */
 .formSect {
+  width: 50%;
   background-color: var(--background);
-  padding-right: 3.5rem;
-  padding-top: 3.5rem;
+  padding-inline: 3%;
 }
 #logoImg {
   width: 25%;
@@ -183,6 +195,12 @@ button:hover {
 button:focus {
   box-shadow: 1px 1px 1px 1px var(--darkAsh) inset;
 }
+@media screen and (min-width: 1440px){
+  body{
+    max-height: 70vh;
+    margin-block: 10%;
+  }
+}
 @media screen and (min-width: 501px) and (max-width: 900px) {
   main{
     background-image: url('../assets/loginHeroImg.png');
@@ -192,7 +210,8 @@ button:focus {
   #loginHero {
     background-image: none;
     margin: auto;
-    position: static;
+    margin: 0;
+    height: max-content;
   }
   .loginHeroText {
     position: static;
