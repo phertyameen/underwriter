@@ -258,6 +258,7 @@ hr {
 .parentInpDiv input {
   padding: 0.3rem 1.5rem;
   border-radius: 8px;
+  outline: none;
   border: 1px solid #d0d5dd;
 }
 .inspChildDivText #parentInpDivText {

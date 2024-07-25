@@ -147,12 +147,19 @@
     })
 
     // redirects back to overview section | initial dashboard
-const overview = document.querySelector('.overview')
-console.log(overview)
+    const overview = document.querySelector('.overview')
+    console.log(overview)
 
-overview.addEventListener('click', () => {
-    window.location.href = 'dashboard.html'
-})
+    overview.addEventListener('click', () => {
+        window.location.href = 'dashboard.html'
+    })
+
+    // changes section from overview to requests
+    const requests = document.querySelector('.requestsPg')
+
+    requests.addEventListener('click', () => {
+        window.location.href = 'requests.html'
+    })
 
     // toggling dropdown items in form of select
     const dropdownToggle = document.querySelector('#dropdownToggle');
