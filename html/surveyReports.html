@@ -11,18 +11,6 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/newInspection.css">
-    <style>
-        /* @media screen and (min-width: 1439px){ */
-            /* body{
-                .sideNavSect{
-                    height: 100%;
-                }
-            }
-            .sideNavSect{
-                height: 100%;
-            } */
-        /* } */
-    </style>
 </head>
 
 <body>
@@ -190,9 +178,11 @@
                             <div class="propDescSect">
                                 <p>Rovenheight homes registered as a LLC building on the 15th of May 2016 is a Grey and
                                     White twelve
-                                    storey building located at No 12 OGUNSANYA DRIVE, ALCOVE ESTATE, LEKKI PHASE 1, LAGOS
+                                    storey building located at No 12 OGUNSANYA DRIVE, ALCOVE ESTATE, LEKKI PHASE 1,
+                                    LAGOS
                                     STATE. The
-                                    property is owned by Mr. Badmus Akinrele who stands as the insurer of the property.</p>
+                                    property is owned by Mr. Badmus Akinrele who stands as the insurer of the property.
+                                </p>
                             </div>
                             <div class="supportDocSect">
                                 <div>
@@ -244,23 +234,39 @@
 </body>
 <!-- <script src="../js/jsAll.js"></script> -->
 <script>
+    let menuIcon = document.querySelector('#menuIcon')
+    let exitIcon = document.querySelector('.exitIcon')
+
+    menuIcon.addEventListener('click', () => {
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.toggle('show');
+        // exitIcon.style.display = 'block' 
+    })
+    exitIcon.addEventListener('click', () => {
+        console.log(exitIcon)
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.remove('show');
+    })
+
 
     // redirects back to overview section | initial dashboard
-const overview = document.querySelector('.overview')
-console.log(overview)
+    const overview = document.querySelector('.overview')
+    console.log(overview)
 
-overview.addEventListener('click', () => {
-    window.location.href = 'dashboard.html'
-})
+    overview.addEventListener('click', () => {
+        window.location.href = 'dashboard.html'
+    })
 
-// changes section from overview to requests
-const requests = document.querySelector('.requests')
+    // changes section from overview to requests
+    const requests = document.querySelector('.requests')
 
-requests.addEventListener('click', () => {
+    requests.addEventListener('click', () => {
 
-    window.location.href = 'requests.html'
-    requests.style.color = '#ff7a00'
-})
+        window.location.href = 'requests.html'
+        requests.style.color = '#ff7a00'
+    })
 
     // rotating between all propInfoSpan, propDescSpan and supportDocSpan sections
 
@@ -336,8 +342,8 @@ requests.addEventListener('click', () => {
         progressValue.textContent = `${percent}%`;
     }
 
-    // Set progress to 70%
-    setProgress(70);
+    // Set progress to 67%
+    setProgress(67);
 </script>
 
 </html>

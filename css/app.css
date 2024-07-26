@@ -9,7 +9,9 @@
 
 /* ----------------------------index | Login form page ----------------------------------*/
 body {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 header {
@@ -19,7 +21,7 @@ header {
 main {
   display: flex;
   height: 100%;
-  /* width: 100%; */
+  width: 100%;
   flex-direction: row-reverse;
   max-width: 1440px;
   margin: auto;
@@ -45,6 +47,7 @@ h1 {
 #loginHero {
   width: 53%;
   height: 100%;
+  /* background-image: url("../assets/loginHeroImg.png"); */
   background-image: url("../assets/loginHeroImg.png");
   background-position: center;
   background-size: cover;
@@ -85,14 +88,20 @@ h1 {
   background-color: var(--background);
   padding-inline: 3%;
   height: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
 }
 #logoImg {
-  width: 25%;
-  height: 25%;
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 2rem;
 }
 #logoImg img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 form div h3 {
   color: var(--lightAsh);
@@ -201,26 +210,17 @@ button:focus {
 }
 @media screen and (min-width: 1440px) {
   body {
-    max-height: 70vh;
+    max-height: 70vh !important;
     margin-block: 10%;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 900px) {
-  main {
-    background-image: url("../assets/loginHeroImg.png");
-    flex-direction: column;
-    height: 100vh;
-  }
+/* @media screen and (min-width: 501px) and (max-width: 900px) {
   #loginHero {
-    background-image: none;
-    margin: auto;
-    margin: 0;
-    height: max-content;
+    height: 40vh;
+    width: 100%;
   }
   .loginHeroText {
-    position: static;
-    margin-top: 2rem;
-    transform: translate(0%);
+    transform: translate(-50%, 50%);
   }
   .chatIconDiv {
     padding: 5px;
@@ -228,13 +228,13 @@ button:focus {
   }
   .loginHeroTextDiv {
     padding-inline: 0.2rem;
-  }
+  } */
 
   /* form section */
   .formSect {
-    width: 90%;
-    height: max-content;
-    margin: 2rem auto;
+    /* width: 90%; */
+    height: 100%;
+    /* margin: 2rem auto; */
     background-color: var(--background);
     padding-top: 0;
     border-radius: 20px;
@@ -259,22 +259,17 @@ button:focus {
     padding-block: 1rem;
     width: 100%;
   }
-}
+/* } */
 
 /* ----------------mobile responsiveness ------------------------ */
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 0) and (max-width: 900px) {
   main {
     flex-direction: column;
   }
   #loginHero {
     width: 100%;
-    height: 80vh;
-    align-content: center;
-    padding-inline: 0;
-    background-image: url("../assets/loginHeroImg.png");
-    background-position: bottom;
-    background-size: contain;
+    height: 40vh;
   }
   .loginHeroText {
     flex-direction: column;

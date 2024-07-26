@@ -133,7 +133,7 @@
                     <!-- REQUEST CARDS -->
                     <div class="cardsParentDiv">
                         <div class="offset">
-                            <p><span class="size orangeDotSpan"></span>25 Jan, 2020  9:39 AM</p>
+                            <p><span class="size orangeDotSpan"></span>25 Jan, 2020 9:39 AM</p>
                         </div>
                         <div class="cardDiv card1">
                             <div class="cardDivText">
@@ -153,9 +153,9 @@
                                 <button id="viewRequestBtn">View request</button>
                             </div>
                         </div>
-                        
+
                         <div class="offset" id="spanBottom">
-                            <p><span class="size orangeDotSpan"></span>25 Jan, 2020  9:39 AM</p>
+                            <p><span class="size orangeDotSpan"></span>25 Jan, 2020 9:39 AM</p>
                         </div>
                         <div class="cardDiv">
                             <div class="cardDivText">
@@ -181,12 +181,33 @@
         </section>
     </main>
 </body>
-<script src="../js/jsAll.js"></script>
+<!-- <script src="../js/jsAll.js"></script> -->
 <script>
+    // getting a menu icon to dispay a dropdown in a mobile view
+
+    let menuIcon = document.querySelector('#menuIcon')
+    let exitIcon = document.querySelector('.exitIcon')
+    console.log(menuIcon, exitIcon)
+
+    menuIcon.addEventListener('click', () => {
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.toggle('show');
+        // exitIcon.style.display = 'block' 
+    })
+
+    exitIcon.addEventListener('click', () => {
+        console.log(exitIcon)
+        const sideNavSect = document.querySelector('.sideNavSect')
+        // sideNavSect.style.display = 'flex'
+        sideNavSect.classList.remove('show');
+    })
+
     const viewRequestBtn = document.querySelector('#viewRequestBtn')
 
     viewRequestBtn.addEventListener('click', () => {
         window.location.href = 'surveyReports.html'
     })
 </script>
+
 </html>

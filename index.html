@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/app.css">
 </head>
@@ -13,6 +16,7 @@
         max-height: 1100px;
     } */
 </style>
+
 <body>
     <header>
         <div class="helpIconDiv">
@@ -37,7 +41,7 @@
             <div id="logoImg">
                 <img src="./assets/logo.png" alt="">
             </div>
-            <form class="loginForm">
+            <form class="loginForm" id="loginForm">
                 <div>
                     <h1>Underwriter Dashboard</h1>
                     <h3>Welcome. Login to your portal account.</h3>
@@ -49,7 +53,8 @@
                 </div>
                 <div class="inpDiv">
                     <label for="password" class="innerLabel">Password</label>
-                    <input type="password" name="password" id="loginId" placeholder="enter your password" class="inpDivInp">
+                    <input type="password" name="password" id="password" placeholder="enter your password"
+                        class="inpDivInp">
                     <small>SHOW</small>
                     <i class="fa-solid fa-lock"></i>
                 </div>
@@ -60,7 +65,7 @@
                     <p id="passWReset">Reset Password</p>
                 </div>
                 <div class="btnDiv">
-                    <button id="btnDiv">Login</button>
+                    <button type="button" id="btnDiv">Login</button>
                 </div>
             </form>
         </section>
@@ -68,14 +73,21 @@
 </body>
 <script>
 
-    const loginbtn = document.querySelector('#btnDiv')
-    console.log(loginbtn)
+    document.getElementById('btnDiv').addEventListener('click', function (e) {
+        e.preventDefault();
 
-    loginbtn.addEventListener('click', e => {
+        const loginId = document.getElementById('loginId').value;
+        const password = document.getElementById('password').value;
+        // const errorMessage = document.getElementById('error-message');
 
-        e.preventDefault()
-        window.location.href = './html/dashboard.html'
-    })
+        if (loginId === 'admin' && password === 'admin') {
+            window.location.href = '/html/dashboard.html';
+        } else {
+            alert('Invalid login ID or password') ;
+        }
+    });
+
+
 </script>
 
 </html>
