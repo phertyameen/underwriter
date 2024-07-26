@@ -37,7 +37,7 @@ main {
 .logoDiv {
   margin-block: 2rem;
 }
-.fa-xmark{
+.fa-xmark {
   display: none;
 }
 .subSideNavDiv h3 {
@@ -144,9 +144,13 @@ button i {
 }
 .cardsDivParent {
   width: 100%; /* Ensuring enough space for two columns */
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   /* gap: 1rem; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  height: 100%;
 }
 .cardsDiv {
   display: grid;
@@ -154,7 +158,7 @@ button i {
   grid-template-columns: 1fr 1fr; /* Two columns of equal width */
   grid-template-rows: auto;
   align-content: center;
-  width: 45%;
+  /* width: 45%; */
 }
 
 /* colorful divs containers */
@@ -174,6 +178,9 @@ button i {
   margin-top: 1rem;
   position: relative; /* Make sure it can be layered */
   z-index: 2; /* Higher than the images */
+}
+.all-p {
+  margin-top: 1rem;
 }
 .pointerDiv img {
   width: 2rem;
@@ -217,8 +224,9 @@ button i {
 }
 
 .activityDiv {
-  width: 50%;
-  height: 230px;
+  width: 100%;
+  /* height: 230px; */
+  height: 100%;
   border: 1px solid #d8d8d8;
   border-radius: 10px;
 }
@@ -341,7 +349,7 @@ td {
   color: #ff7a00;
   background-color: #ffdebf;
 }
-.statusOngoingTd:hover{
+.statusOngoingTd:hover {
   cursor: pointer;
 }
 .statusCompleteTd {
@@ -432,7 +440,8 @@ table tr:last-child td:last-child {
 
   .cardsDivParent {
     width: 100%; /* Ensuring enough space for two columns */
-    flex-direction: column;
+    /* flex-direction: column; */
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
   .cardsDiv {
@@ -443,11 +452,11 @@ table tr:last-child td:last-child {
     align-content: center;
   }
   .childDiv {
-    width: 80%;
+    width: 100%;
   }
 
   .activityDiv {
-    width: 90%;
+    width: 100%;
     height: 230px;
     border: 1px solid #d8d8d8;
     border-radius: 10px;
@@ -499,24 +508,25 @@ table tr:last-child td:last-child {
     opacity: 1;
     /* transform: translateX(0); */
     visibility: visible;
-}
+  }
   header {
     display: flex;
     justify-content: space-between;
     padding-inline: 1rem;
   }
-  .fa-bars, .fa-xmark {
+  .fa-bars,
+  .fa-xmark {
     font-size: 2rem;
     color: var(--iconColor);
   }
-  .exitIcon{
+  .exitIcon {
     position: absolute;
     top: 3rem;
     right: 1.5rem;
     height: 20px;
     width: 20px;
   }
-  .fa-xmark{
+  .fa-xmark {
     color: var(--black);
     position: static;
     font-size: 2rem;
@@ -588,7 +598,8 @@ table tr:last-child td:last-child {
   }
   .cardsDivParent {
     width: 100%;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
+    grid-template-columns: 1fr;
     margin: 1rem;
     gap: 1rem;
   }
@@ -608,12 +619,12 @@ table tr:last-child td:last-child {
     height: max-content;
     margin: 0;
   }
-  .secImgDeco{
+  .secImgDeco {
     bottom: -7.129rem;
   }
 
   /* Created Inspections table */
-  table{
+  table {
     width: 100%;
     overflow: auto;
     table-layout: auto;

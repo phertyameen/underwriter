@@ -16,55 +16,55 @@
   --blueishAsh: #f3f5f6;
   --red: #ee5331;
   --orange: #ff7a00;
-  --sideBarBg: #2F2F2F;
-  --sideBarColor: #9FA8AF;
+  --sideBarBg: #2f2f2f;
+  --sideBarColor: #9fa8af;
 }
-input{
+input {
   outline: none;
 }
 @media screen and (min-width: 1440px) {
-  body{
+  body {
     height: 100vh;
   }
-  .sideNavSect{
+  .sideNavSect {
     height: 100vh;
   }
-  .childDiv{
+  .childDiv {
     height: 163px !important;
   }
   .secImgDeco {
     position: absolute;
     left: -1rem;
-    bottom: -8.89rem !important;
+    bottom: -9.2rem !important;
     border-bottom-left-radius: 10px;
-}
-.pointerDiv {
-margin-top: 2.75rem !important;
-}
-.activityDiv {
-  width: 50%;
-  height: max-content !important;
-}
-.activityList{
-  margin-bottom: 2rem !important;
-}
-.inspectionTblDiv{
-  height: max-content !important;
-}
+  }
+  .pointerDiv {
+    margin-top: 2.75rem !important;
+  }
+  .activityDiv {
+    width: 50%;
+    height: max-content !important;
+  }
+  .activityList {
+    margin-bottom: 2rem !important;
+  }
+  .inspectionTblDiv {
+    height: max-content !important;
+  }
 
-/* New Inspection */
-.inspectionSect{
-  margin-block: 8rem !important;
-}
+  /* New Inspection */
+  .inspectionSect {
+    margin-block: 8rem !important;
+  }
 
-/* LossInspectionSect forms */
-.preLossInspectionSect{
-  height: max-content !important;
-}
-.parentInpDiv {
-  width: 800px !important;
-}
-.inspChildDivText #parentInpDivText {
-  width: 100% !important;
-}
+  /* LossInspectionSect forms */
+  .preLossInspectionSect {
+    height: max-content !important;
+  }
+  .parentInpDiv {
+    width: 800px !important;
+  }
+  .inspChildDivText #parentInpDivText {
+    width: 100% !important;
+  }
 }

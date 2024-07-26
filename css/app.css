@@ -39,7 +39,7 @@ main {
   align-items: center;
 }
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   color: var(--darkAsh);
 }
 #loginHero {
@@ -84,6 +84,7 @@ h1 {
   width: 50%;
   background-color: var(--background);
   padding-inline: 3%;
+  height: 100%;
 }
 #logoImg {
   width: 25%;
@@ -99,7 +100,7 @@ form div h3 {
   margin-block: 13px 20px;
 }
 form div {
-  width: 29.6rem;
+  width: 100%;
 }
 form div label {
   color: var(--black);
@@ -139,6 +140,9 @@ input[type="checkbox"]:checked::after {
   right: 50%;
   padding-inline: 2px;
   transform: translate(-50%, -50%);
+  /* top: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%); */
   background-color: var(--orange);
 }
 .inpDivInp:hover {
@@ -195,15 +199,15 @@ button:hover {
 button:focus {
   box-shadow: 1px 1px 1px 1px var(--darkAsh) inset;
 }
-@media screen and (min-width: 1440px){
-  body{
+@media screen and (min-width: 1440px) {
+  body {
     max-height: 70vh;
     margin-block: 10%;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 900px) {
-  main{
-    background-image: url('../assets/loginHeroImg.png');
+  main {
+    background-image: url("../assets/loginHeroImg.png");
     flex-direction: column;
     height: 100vh;
   }
@@ -227,34 +231,34 @@ button:focus {
   }
 
   /* form section */
-.formSect {
-  width: 90%;
-  height: max-content;
-  margin: 2rem auto;
-  background-color: var(--background);
-  padding-top: 0;
-  border-radius: 20px;
-}
-.loginForm{
-  width: max-content;
-  margin: auto;
-}
-#logoImg {
-  width: 22%;
-  height: 22%;
-  margin: 2rem auto;
-}
-form div h3 {
-  margin-block: 10px;
-}
-.inpDivInp {
-  height: 3.2rem;
-  border: none;
-}
-.btnDiv button {
-  padding-block: 1rem;
-  width: 100%;
-}
+  .formSect {
+    width: 90%;
+    height: max-content;
+    margin: 2rem auto;
+    background-color: var(--background);
+    padding-top: 0;
+    border-radius: 20px;
+  }
+  .loginForm {
+    width: max-content;
+    margin: auto;
+  }
+  #logoImg {
+    width: 22%;
+    height: 22%;
+    margin: 2rem auto;
+  }
+  form div h3 {
+    margin-block: 10px;
+  }
+  .inpDivInp {
+    height: 3.2rem;
+    border: none;
+  }
+  .btnDiv button {
+    padding-block: 1rem;
+    width: 100%;
+  }
 }
 
 /* ----------------mobile responsiveness ------------------------ */
@@ -293,6 +297,7 @@ form div h3 {
   .formSect {
     background-color: var(--background);
     padding: 1rem;
+    width: 100%;
   }
   h1 {
     font-size: 1.8rem;
@@ -320,5 +325,10 @@ form div h3 {
   }
   .btnDiv button {
     padding-block: 0.7rem;
+  }
+
+  input[type="checkbox"]:checked::after {
+    top: 52%;
+    right: -50%;
   }
 }
