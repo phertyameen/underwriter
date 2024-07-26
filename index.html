@@ -55,7 +55,7 @@
                     <label for="password" class="innerLabel">Password</label>
                     <input type="password" name="password" id="password" placeholder="enter your password"
                         class="inpDivInp">
-                    <small>SHOW</small>
+                    <small id="togglePassword">SHOW</small>
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 <div class="checkInp">
@@ -84,6 +84,22 @@
             window.location.href = '/html/dashboard.html';
         } else {
             alert('Invalid login ID or password') ;
+        }
+    });
+
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordInput = document.getElementById('password');
+
+        if (passwordInput.value) { // Check if input field is not empty
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                this.innerText = 'HIDE';
+            } else {
+                passwordInput.type = 'password';
+                this.innerText = 'SHOW';
+            }
+        } else {
+            alert('Please enter a password first');
         }
     });
 

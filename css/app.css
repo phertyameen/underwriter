@@ -91,11 +91,6 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-#logoImg {
-  width: 8rem;
-  height: 8rem;
-  margin-bottom: 2rem;
-}
 #logoImg img {
   width: 100%;
   height: 100%;
@@ -230,12 +225,10 @@ button:focus {
 
   /* form section */
   .loginForm {
-    width: max-content;
+    width: 90%;
     margin: auto;
   }
   #logoImg {
-    width: 22%;
-    height: 22%;
     margin: 2rem auto;
   }
   form div h3 {
