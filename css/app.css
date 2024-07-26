@@ -84,13 +84,11 @@ h1 {
 }
 /* form section */
 .formSect {
+  border-radius: 20px;
   width: 50%;
   background-color: var(--background);
-  padding-inline: 3%;
   height: 100%;
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
   flex-direction: column;
 }
 #logoImg {
@@ -231,14 +229,6 @@ button:focus {
   } */
 
   /* form section */
-  .formSect {
-    /* width: 90%; */
-    height: 100%;
-    /* margin: 2rem auto; */
-    background-color: var(--background);
-    padding-top: 0;
-    border-radius: 20px;
-  }
   .loginForm {
     width: max-content;
     margin: auto;
